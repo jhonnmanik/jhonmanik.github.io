@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Perkenalan Diri - Anak IT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background: #0f172a; /* Dark navy */
+            color: #e2e8f0;
+            min-height: 100vh;
+            padding: 40px 16px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 860px;
+            background: #0b1220;
+            padding: 32px;
+            border-radius: 20px;
+            border: 1px solid rgba(148,163,184,0.2);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+
+            /* animasi masuk */
+            opacity: 0;
+            transform: translateY(24px) scale(0.98);
+            animation: cardEnter 0.8s ease-out forwards;
+        }
+
+        .top {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .pfp {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background: linear-gradient(135deg,#38bdf8,#4f46e5,#a855f7);
+            padding: 3px;
+            overflow: hidden;
+
+            /* animasi hover */
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .pfp:hover {
+            transform: translateY(-4px) scale(1.04);
+            box-shadow: 0 0 28px rgba(56,189,248,0.55);
+        }
+
+        .photo {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .name {
+            font-size: 28px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .role {
+            font-size: 16px;
+            margin-top: 4px;
+            color: #94a3b8;
+        }
+
+        .tagline {
+            margin-top: 8px;
+            font-size: 14px;
+            color: #60a5fa;
+            font-weight: 500;
+
+            /* efek glow pelan */
+            animation: taglinePulse 2.6s ease-in-out infinite;
+        }
+
+        .section-title {
+            margin-top: 32px;
+            margin-bottom: 10px;
+            font-size: 14px;
+            letter-spacing: 2px;
+            color: #94a3b8;
+            text-transform: uppercase;
+        }
+
+        .line {
+            height: 1px;
+            background: radial-gradient(circle, #475569 0%, transparent 60%);
+            opacity: .6;
+            margin-bottom: 16px;
+        }
+
+        .text {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #cbd5e1;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .skill {
+            background: rgba(30,41,59,0.8);
+            padding: 7px 14px;
+            font-size: 13px;
+            border-radius: 8px;
+            border: 1px solid rgba(148,163,184,0.3);
+            color: #e2e8f0;
+
+            /* animasi hover */
+            transition: transform 0.22s ease, 
+                        box-shadow 0.22s ease,
+                        background 0.22s ease,
+                        border-color 0.22s ease;
+        }
+
+        .skill:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(15,23,42,0.9);
+            background: rgba(37,99,235,0.18);
+            border-color: rgba(129,140,248,1);
+        }
+
+        .links {
+            margin-top: 22px;
+            display: flex;
+            gap: 18px;
+        }
+
+        .links a {
+            position: relative;
+            text-decoration: none;
+            font-size: 14px;
+            color: #38bdf8;
+            opacity: 0.85;
+            transition: opacity 0.2s ease;
+        }
+
+        .links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            width: 0;
+            height: 2px;
+            background: #38bdf8;
+            transition: width 0.25s ease;
+        }
+
+        .links a:hover {
+            opacity: 1;
+        }
+
+        .links a:hover::after {
+            width: 100%;
+        }
+
+        @media (max-width: 540px){
+            .top {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* KEYFRAMES ANIMASI */
+        @keyframes cardEnter {
+            from {
+                opacity: 0;
+                transform: translateY(24px) scale(0.98);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes taglinePulse {
+            0%, 100% {
+                text-shadow: 0 0 0 rgba(56,189,248,0);
+            }
+            50% {
+                text-shadow: 0 0 16px rgba(56,189,248,0.7);
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="card">
+
+    <!-- Bagian Atas -->
+    <div class="top">
+        <div class="pfp">
+            <img src="images/jhon_profile_300x300.jpg" alt="Foto Jhon Manik" class="photo">
+        </div>
+
+        <div>
+            <div class="name">Jhon Manik</div>
+            <div class="role">Mahasiswa PTIK • Calon Programmer</div>
+            <div class="tagline">"Ingin Menjadi Programmer Handal, Namun Enggan Ngoding"</div>
+        </div>
+    </div>
+
+    <!-- Tentang Saya -->
+    <div class="section-title">Tentang Saya</div>
+    <div class="line"></div>
+    <p class="text">
+        Halo! Saya Jhon Manik, seseorang yang ingin menjadi Programmer Handal namun enggan ngoding.
+        Saya Hanya fokus scroll fesnuk.
+    </p>
+
+    <!-- Skill -->
+    <div class="section-title">Skill</div>
+    <div class="line"></div>
+
+    <div class="skills">
+        <div class="skill">C++ Dasar</div>
+        <div class="skill">C# Dasar</div>
+        <div class="skill">Java Dasar</div>
+        <div class="skill">HTML / CSS</div>
+        <div class="skill">IoT Arduino</div>
+        <div class="skill">Problem Solving</div>
+        <div class="skill">UI Design Beginner</div>
+    </div>
+
+    <!-- Hobi -->
+    <div class="section-title">Hobi & Minat</div>
+    <div class="line"></div>
+    <p class="text">
+        • Scroll Facebook<br>
+        • Ngulik laptop & software<br>
+        • Belajar teknologi baru<br>
+        • Nonton One Piece tiap minggu
+    </p>
+
+    <!-- Link Sosial -->
+    <div class="section-title">Sosial Media</div>
+    <div class="line"></div>
+
+    <div class="links">
+        <a href="https://instagram.com/jhonnmanik" target="_blank">Instagram</a>
+        <a href="https://github.com/jhonnmanik" target="_blank">GitHub</a>
+        <a href="jhonnmanik06@gmail.com">Email</a>
+    </div>
+
+</div>
+
+</body>
+</html>
