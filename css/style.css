@@ -6,7 +6,7 @@
 }
 
 body {
-    background: #0f172a; /* Dark navy */
+    background: #0f172a;
     color: #e2e8f0;
     min-height: 100vh;
     padding: 40px 16px;
@@ -23,7 +23,6 @@ body {
     border: 1px solid rgba(148,163,184,0.2);
     box-shadow: 0 20px 60px rgba(0,0,0,0.4);
 
-    /* animasi masuk */
     opacity: 0;
     transform: translateY(24px) scale(0.98);
     animation: cardEnter 0.8s ease-out forwards;
@@ -43,7 +42,6 @@ body {
     padding: 3px;
     overflow: hidden;
 
-    /* animasi hover */
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
@@ -78,7 +76,6 @@ body {
     color: #60a5fa;
     font-weight: 500;
 
-    /* efek glow pelan */
     animation: taglinePulse 2.6s ease-in-out infinite;
 }
 
@@ -119,7 +116,6 @@ body {
     border: 1px solid rgba(148,163,184,0.3);
     color: #e2e8f0;
 
-    /* animasi hover */
     transition: transform 0.22s ease, 
                 box-shadow 0.22s ease,
                 background 0.22s ease,
@@ -174,7 +170,6 @@ body {
     }
 }
 
-/* KEYFRAMES ANIMASI */
 @keyframes cardEnter {
     from {
         opacity: 0;
@@ -194,3 +189,4 @@ body {
         text-shadow: 0 0 16px rgba(56,189,248,0.7);
     }
 }
+
