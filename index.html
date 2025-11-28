@@ -14,7 +14,7 @@
         }
 
         body {
-            background: #0f172a; /* Dark navy */
+            background: #0f172a;
             color: #e2e8f0;
             min-height: 100vh;
             padding: 40px 16px;
@@ -31,7 +31,6 @@
             border: 1px solid rgba(148,163,184,0.2);
             box-shadow: 0 20px 60px rgba(0,0,0,0.4);
 
-            /* animasi masuk */
             opacity: 0;
             transform: translateY(24px) scale(0.98);
             animation: cardEnter 0.8s ease-out forwards;
@@ -51,7 +50,6 @@
             padding: 3px;
             overflow: hidden;
 
-            /* animasi hover */
             transition: transform 0.4s ease, box-shadow 0.4s ease;
         }
 
@@ -86,7 +84,6 @@
             color: #60a5fa;
             font-weight: 500;
 
-            /* efek glow pelan */
             animation: taglinePulse 2.6s ease-in-out infinite;
         }
 
@@ -127,7 +124,6 @@
             border: 1px solid rgba(148,163,184,0.3);
             color: #e2e8f0;
 
-            /* animasi hover */
             transition: transform 0.22s ease, 
                         box-shadow 0.22s ease,
                         background 0.22s ease,
@@ -179,10 +175,9 @@
             .top {
                 flex-direction: column;
                 text-align: center;
-            }
+            }        
         }
-
-        /* KEYFRAMES ANIMASI */
+        
         @keyframes cardEnter {
             from {
                 opacity: 0;
@@ -209,7 +204,6 @@
 
 <div class="card">
 
-    <!-- Bagian Atas -->
     <div class="top">
         <div class="pfp">
             <img src="images/jhon_profile_300x300.jpg" alt="Foto Jhon Manik" class="photo">
@@ -222,7 +216,6 @@
         </div>
     </div>
 
-    <!-- Tentang Saya -->
     <div class="section-title">Tentang Saya</div>
     <div class="line"></div>
     <p class="text">
@@ -230,7 +223,6 @@
         Izin serius, Mau Scroll Facebook dulu.
     </p>
 
-    <!-- Skill -->
     <div class="section-title">Skill</div>
     <div class="line"></div>
 
@@ -242,7 +234,6 @@
         <div class="skill">IoT Arduino</div>
     </div>
 
-    <!-- Hobi -->
     <div class="section-title">Kegiatan Positif</div>
     <div class="line"></div>
     <p class="text">
@@ -252,7 +243,6 @@
         • Nonton One Piece tiap minggu<br>
     </p>
 
-    <!-- Link Sosial -->
     <div class="section-title">Sosial Media</div>
     <div class="line"></div>
 
@@ -267,3 +257,5 @@
 
 </body>
 </html>
+
+                                                                                                                                                                            
